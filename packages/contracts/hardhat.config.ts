@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
-import "dotenv/config"
-=======
 import { HardhatUserConfig } from "hardhat/config"
 import "@nomicfoundation/hardhat-toolbox"
-import "dotenv"
->>>>>>> main
+import "dotenv/config"
 
 const RPC_URL_MOONBASE_APLHA = process.env.RPC_URL_MOONBASE_APLHA
 const PRIVATE_KEY = process.env.PRIVATE_KEY
