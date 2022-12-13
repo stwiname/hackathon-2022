@@ -1,30 +1,10 @@
 import { ethers } from "hardhat"
 import "dotenv/config"
 import { MyNFT, MyNFT__factory } from "../dist"
+import { metaDataEndpoint, people, Person } from "../utils/variables"
 
 const NFT_ADDRESS = process.env.NFT_ADDRESS
 const OWNER_ADRESS = process.env.MAIN_ADDRESS
-export const metaDataEndpoint =
-    "https://gateway.pinata.cloud/ipfs/QmTfLu91SDcwmW1zP3meF7mEcPkieYBCMA5HmRnfC2AbbL"
-
-type Person = {
-    name: string
-    address: string
-}
-export const people: Person[] = [
-    {
-        name: "ian",
-        address: process.env.IANS_ADDRESS!,
-    },
-    {
-        name: "rob",
-        address: process.env.ROBS_ADDRESS!,
-    },
-    {
-        name: "weiqi",
-        address: process.env.WEIQIS_ADDRESS!,
-    },
-]
 
 const main = async () => {
     const contract = await MyNFT__factory.connect(

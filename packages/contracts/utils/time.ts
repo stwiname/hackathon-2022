@@ -5,3 +5,5 @@ export const getEpochOfLastHour = () => {
 
     return epochOfLastHour
 }
+export const epochStart = getEpochOfLastHour()
+export const epochDuration = 60 * 60 // 1 hour
