@@ -1,0 +1,14 @@
+{
+  "name": "hackathon-2022",
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": "git@github.com:stwiname/hackathon-2022.git",
+  "author": "Scott Twiname <skott.twiname@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.1.1",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
