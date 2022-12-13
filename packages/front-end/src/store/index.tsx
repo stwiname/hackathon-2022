@@ -2,7 +2,6 @@ import { applySnapshot, getSnapshot, types } from 'mobx-state-tree';
 import { RouterModel, syncHistoryWithStore } from 'mst-react-router';
 import React, { createContext, useContext } from 'react';
 import { Auth } from './auth';
-import { useLocalStore } from 'mobx-react';
 
 const routerStore = RouterModel.create();
 

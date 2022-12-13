@@ -9,6 +9,8 @@ interface IProps extends RouteConfigComponentProps {}
 
 export const HomePage: React.FC<IProps> = (Iprops) => {
     return (
-        <></>
+        <>
+            <Header/>
+        </>
     )
 }
