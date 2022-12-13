@@ -43,6 +43,8 @@ const deployRenting = async (nft: string, token: string) => {
 
 describe("Renting", () => {
     const deployRentingFixture = async () => {
+        console.log("deployRentingFixture:")
+
         // const [
         //     mainSigner, //
         //     iansSigner,
