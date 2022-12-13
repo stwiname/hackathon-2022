@@ -9,11 +9,18 @@
 
   .trendingAndListing {
     height: 500px;
+    margin-top: 12px;
+    padding-left: 8px;
 
     .trendingCol {
       height: 500px;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
       width: 100%;
+
+      .alink {
+        font-size: 16px;
+        padding: 8px 0;
+      }
     }
   }
 }
