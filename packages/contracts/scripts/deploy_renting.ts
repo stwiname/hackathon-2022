@@ -5,8 +5,8 @@ const env = {
     NFT_ADDRESS: process.env.NFT_ADDRESS,
     TOKEN_ADDRESS: process.env.TOKEN_ADDRESS,
 }
-const epochStart = getEpochOfLastHour()
-const epochDuration = 60 * 60 // 1 hour
+export const epochStart = getEpochOfLastHour()
+export const epochDuration = 60 * 60 // 1 hour
 
 async function main() {
     checkAllEnvVariables(env)

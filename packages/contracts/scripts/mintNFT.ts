@@ -4,14 +4,14 @@ import { MyNFT, MyNFT__factory } from "../dist"
 
 const NFT_ADDRESS = process.env.NFT_ADDRESS
 const OWNER_ADRESS = process.env.MAIN_ADDRESS
-const metaDataEndpoint =
+export const metaDataEndpoint =
     "https://gateway.pinata.cloud/ipfs/QmTfLu91SDcwmW1zP3meF7mEcPkieYBCMA5HmRnfC2AbbL"
 
 type Person = {
     name: string
     address: string
 }
-const people: Person[] = [
+export const people: Person[] = [
     {
         name: "ian",
         address: process.env.IANS_ADDRESS!,
