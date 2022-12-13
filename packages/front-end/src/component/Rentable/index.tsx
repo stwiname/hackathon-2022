@@ -1,4 +1,6 @@
-import React, { FC } from "react"
+import React, { FC, useContext } from "react"
+import { Link } from "react-router-dom"
+import { context } from "../../pages"
 // import style from "./Rentable.module.less"
 
 interface IProps {
@@ -7,11 +9,15 @@ interface IProps {
 }
 
 export const Rentable: FC<IProps> = (props) => {
+    const [state, useState] = useContext(context)
+
     return (
-        // <div className={style.Rentable}>
         <div>
             {/* prettier sucks */}I am a rentable and my name is
             {props.rentable.name}
+            {state.isConnected && (
+                <Link to={`${props.rentable.name}`}>More Info</Link>
+            )}
         </div>
     )
 }

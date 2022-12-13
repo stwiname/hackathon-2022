@@ -11,6 +11,15 @@ export const Header: React.FC<IProps> = () => {
 
     const privateKey = "test"
 
+    const handleConnect = (key: string) => {
+        if (key) {
+            setState((state: any) => ({
+                ...state,
+                isConnected: true,
+            }))
+        }
+    }
+
     return (
         <div className={style.header}>
             <div className="logo">Logo</div>
@@ -25,7 +34,8 @@ export const Header: React.FC<IProps> = () => {
                     //     ...state,
                     //     isConnected: true,
                     // }))
-                    state.handleConnect(state, setState, privateKey)
+                    // state.handleConnect(state, setState, privateKey)
+                    handleConnect(privateKey)
                     console.log(state)
                 }}
             >

@@ -1,4 +1,5 @@
 import React, { FC, useContext } from "react"
+import { Outlet } from "react-router-dom"
 import { Rentable } from "../../component/Rentable"
 import { context } from "../HomePage"
 // import style from "./rentables.module.less"
@@ -12,7 +13,7 @@ export const Rentables: FC<IProps> = (props) => {
 
     return (
         <div>
-            {state.isConnected ? (
+            {/* {state.isConnected ? (
                 <div>
                     rentables list:
                     {state.rentables?.map((rentable: any) => (
@@ -21,7 +22,15 @@ export const Rentables: FC<IProps> = (props) => {
                 </div>
             ) : (
                 <div>you are not connected yet!</div>
-            )}
+            )} */}
+
+            <div>
+                rentables list:
+                {state.rentables?.map((rentable: any) => (
+                    <Rentable rentable={rentable} key={rentable.name} />
+                ))}
+            </div>
+            <Outlet />
         </div>
     )
 }

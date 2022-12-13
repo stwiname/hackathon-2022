@@ -6,8 +6,12 @@ import { Store, initialStoreState } from "../../store"
 
 interface IProps extends RouteConfigComponentProps {}
 
-// export const context = React.createContext({} as Store)
-export const context = React.createContext({} as any)
+type State = [
+    state: Store,
+    setState: React.Dispatch<React.SetStateAction<Store>>
+]
+
+export const context = React.createContext({} as State)
 const Provider = context.Provider
 
 export const HomePage: React.FC<IProps> = (Iprops) => {
