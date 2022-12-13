@@ -10,4 +10,25 @@
 
     // add a border
     border-bottom: 1px solid #e5e5e5;
+
+    .logoText {
+        font-family: Chalkduster, fantasy;
+        font-size: 24px;
+        line-height: 60px;
+        height: 100%;
+        width: 180px;
+    }
+    .inputAndUser {
+        display: flex;
+        gap: 24px;
+        .userIcon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .userIcon:hover {
+            color: grey;
+        }
+    }
+
+
 }
