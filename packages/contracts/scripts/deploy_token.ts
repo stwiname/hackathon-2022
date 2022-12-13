@@ -6,7 +6,7 @@ async function main() {
 
     await token.deployed()
 
-    console.log(`NFT deployed to ${token.address}`)
+    console.log(`Token deployed to ${token.address}`)
 }
 
 main().catch((error) => {
