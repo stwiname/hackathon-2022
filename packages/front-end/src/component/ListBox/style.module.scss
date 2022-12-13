@@ -1,0 +1,9 @@
+.container {
+  width: calc((100% - 32px) / 3);
+  :global {
+    .ant-card {
+      height: 450px;
+      width: 100%;
+    }
+  }
+}

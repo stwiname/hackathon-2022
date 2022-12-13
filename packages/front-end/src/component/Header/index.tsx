@@ -11,56 +11,38 @@ import {
     SmileOutlined,
     UserOutlined,
     HeartOutlined,
+    IdcardOutlined,
 } from "@ant-design/icons"
 
 interface IProps extends RouteConfigComponentProps {}
 
-const items: MenuProps["items"] = [
-    {
-        key: "1",
-        label: (
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.antgroup.com"
-            >
-                Profile
-            </a>
-        ),
-    },
-    {
-        key: "2",
-        label: (
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.aliyun.com"
-            >
-                Favorite
-            </a>
-        ),
-        icon: <HeartOutlined />,
-    },
-    {
-        key: "3",
-        label: (
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.luohanacademy.com"
-            >
-                Watchlist
-            </a>
-        ),
-        icon: <SmileOutlined />,
-    },
-]
-
 export const Header: React.FC<IProps> = observer(() => {
     const { auth } = useStore()
+
+    const items: MenuProps["items"] = [
+        {
+            key: "1",
+            label: <a onClick={ e=> {
+                e.preventDefault();
+                if (auth.user) {
+                    alert(`You are connected with this Wallet ${auth.user[0]}`)
+                }
+            }} rel="noopener noreferrer">Profile</a>,
+            icon: <IdcardOutlined />,
+        },
+        {
+            key: "2",
+            label: <a rel="noopener noreferrer">Favorite</a>,
+            icon: <HeartOutlined />,
+        },
+        {
+            key: "3",
+            label: <a rel="noopener noreferrer">Watchlist</a>,
+            icon: <SmileOutlined />,
+        },
+    ]
     return (
         <div className={styles.header}>
-
             <div className={styles.logoText}>Renting Stars</div>
             {!auth.user ? (
                 <Button
@@ -72,7 +54,7 @@ export const Header: React.FC<IProps> = observer(() => {
                 </Button>
             ) : (
                 <div className={styles.inputAndUser}>
-                    <Input placeholder="Search for you NFT"/>
+                    <Input size="large" placeholder="Search for you NFT" />
                     <Dropdown menu={{ items }}>
                         <Space>
                             <UserOutlined className={styles.userIcon} />
