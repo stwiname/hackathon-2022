@@ -72,7 +72,7 @@ export const Header: React.FC<IProps> = observer(() => {
                 </Button>
             ) : (
                 <div className={styles.inputAndUser}>
-                    <Input placeholder="Search for you NFT"/>
+                    <Input size="large" placeholder="Search for you NFT"/>
                     <Dropdown menu={{ items }}>
                         <Space>
                             <UserOutlined className={styles.userIcon} />
