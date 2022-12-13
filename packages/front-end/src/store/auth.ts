@@ -11,21 +11,18 @@ export const Auth = types
         user: types.maybe(types.frozen()),
     })
     .actions((self) => ({
-        getPrivateKey() {
-            self.state = "pending"
-            window.ethereum
-                .request({
+        getPrivateKey: flow(function* () {
+            self.state = "pending";
+            try {
+                const user = yield window.ethereum.request({
                     method: "eth_requestAccounts",
                     params: [],
                 })
-                .then((res: any) => {
-                    console.log("request accounts", res)
-                    self.user = res;
-                    self.state = "done"
-                })
-                .catch((e: any) => {
-                    console.log("request accounts ERR", e)
-                    self.state = "error"
-                })
-        },
+                self.user = user;
+                self.state = 'done'
+            } catch (err) {
+              console.log(err);
+              self.state = 'error';
+            }
+        })
     }))
