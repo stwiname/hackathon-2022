@@ -1,8 +1,7 @@
 import { MyNFT__factory, MyNFT, RentToken, RentToken__factory } from "@psst/contracts";
-import assert from 'assert'
-
-import { BigNumberish } from '@ethers/bignumber';
-
+import assert from 'assert';
+import type { Signer, BigNumberish} from 'ethers';
+import type { Provider } from "@ethersproject/providers";
 
 export type NFTMetadata = {
     name: string;
