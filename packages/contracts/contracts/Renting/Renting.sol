@@ -55,8 +55,10 @@ contract Renting is ERC165, IERC1155, IRenting {
     epochDuration = _epochDuration;
     epochStart = _epoch1Start;
 
-    require(baseAssetAddress.isContract(), "Asset must be a contract address");
-    require(_feeAsset.isContract(), "Asset must be a contract address");
+    // ! I just commented this out
+    // todo: check that the baseAssetAddress is a contract
+    // require(baseAssetAddress.isContract(), "Asset must be a contract address");
+    // require(_feeAsset.isContract(), "Asset must be a contract address");
 
     // TODO check baseAsset and feeAsset implement correct interfaces
   }
