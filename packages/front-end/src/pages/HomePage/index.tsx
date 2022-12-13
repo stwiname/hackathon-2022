@@ -8,10 +8,14 @@ import styles from "./style.module.scss"
 import { Link } from "react-router-dom"
 import { NFTMetadata } from "../../types/contracts/nft"
 import { ListBox } from "../../component"
+import { RentNFTSdk, TOKEN_IDS, getNFTMetadata } from '../../types/contracts/nft';
+import { useWeb3React } from "@web3-react/core"
 
 interface IProps extends RouteConfigComponentProps {}
 
 export const HomePage: React.FC<IProps> = (Iprops) => {
+    const { library, account } = useWeb3React()
+    const sdk = React.useMemo(() => new RentNFTSdk(library.getSigner(account)), [library, account]);
     const nftList: NFTMetadata[] = [
         {
             name: "Ian the Ingenious",
