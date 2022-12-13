@@ -1372,11 +1372,13 @@ __metadata:
     "@openzeppelin/contracts": ^4.8.0
     "@typechain/ethers-v5": ^10.2.0
     "@typechain/hardhat": ^6.1.5
+    "@types/prettier": ^2
     chai: ^4.3.7
     dotenv: ^16.0.3
     ethers: ^5.7.2
     hardhat: ^2.12.4
     hardhat-gas-reporter: ^1.0.9
+    prettier: ^2.8.1
     solidity-coverage: ^0.8.2
     ts-node: ^10.9.1
     typechain: ^8.1.1
@@ -1683,7 +1685,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2.1.1":
+"@types/prettier@npm:^2, @types/prettier@npm:^2.1.1":
   version: 2.7.1
   resolution: "@types/prettier@npm:2.7.1"
   checksum: 5e3f58e229d6c73b5f5cae2e8f96c1c4a5b5805f83459e17a045ba8e96152b1d38e86b63e3172fb159dac923388699660862b75b2d37e54220805f0e691e26f1
@@ -5967,7 +5969,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.3.1":
+"prettier@npm:^2.3.1, prettier@npm:^2.8.1":
   version: 2.8.1
   resolution: "prettier@npm:2.8.1"
   bin:
