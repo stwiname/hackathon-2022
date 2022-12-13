@@ -1340,7 +1340,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psst/app@workspace:packages/front-end"
   dependencies:
-    "@psst/contracts": "workspace:^"
+    "@psst/contracts": "workspace:*"
     "@types/react": ^18.0.26
     "@types/react-dom": ^18.0.9
     "@vitejs/plugin-react": ^3.0.0
@@ -1351,7 +1351,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psst/contracts@workspace:^, @psst/contracts@workspace:packages/contracts":
+"@psst/contracts@workspace:*, @psst/contracts@workspace:packages/contracts":
   version: 0.0.0-use.local
   resolution: "@psst/contracts@workspace:packages/contracts"
   dependencies:
