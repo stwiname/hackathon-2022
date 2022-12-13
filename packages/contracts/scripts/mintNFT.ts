@@ -6,22 +6,46 @@ const NFT_ADDRESS = process.env.NFT_ADDRESS
 const OWNER_ADRESS = process.env.MAIN_ADDRESS
 const metaDataEndpoint =
     "https://gateway.pinata.cloud/ipfs/QmTfLu91SDcwmW1zP3meF7mEcPkieYBCMA5HmRnfC2AbbL"
-const people = ["ian", "rob", "weiqi"]
 
-const mint = async () => {
+type Person = {
+    name: string
+    address: string
+}
+const people: Person[] = [
+    {
+        name: "ian",
+        address: process.env.IANS_ADDRESS!,
+    },
+    {
+        name: "rob",
+        address: process.env.ROBS_ADDRESS!,
+    },
+    {
+        name: "weiqi",
+        address: process.env.WEIQIS_ADDRESS!,
+    },
+]
+
+const main = async () => {
     const contract = await MyNFT__factory.connect(
         NFT_ADDRESS!,
         await ethers.getSigner(OWNER_ADRESS!)
     )
-    people.map(async (p) => {
-        const metaData = `${metaDataEndpoint}/${p}.json`
-        const tx = await contract.mintNFT(OWNER_ADRESS!, metaData)
-        await tx.wait()
+
+    const mint = async (p: Person) => {
+        console.log(`Minting NFT for ${p.name} at address: ${p.address}`)
+        const metaData = `${metaDataEndpoint}/${p.name}.json`
+        const tx = await contract.mintNFT(p.address, metaData)
+        await tx.wait(1)
         console.log("tx: ", tx)
-    })
+    }
+
+    for (let p = 0; p < people.length; p++) {
+        await mint(people[p])
+    }
 }
 
-mint().catch((error) => {
+main().catch((error) => {
     console.error(error)
     process.exitCode = 1
 })
