@@ -1,5 +1,6 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+import "dotenv"
 
 const RPC_URL_MOONBASE_APLHA = process.env.RPC_URL_MOONBASE_APLHA
 const PRIVATE_KEY = process.env.PRIVATE_KEY
@@ -7,6 +8,9 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY
 const config: HardhatUserConfig = {
     solidity: "0.8.17",
     defaultNetwork: "hardhat",
+    typechain: {
+        outDir: 'src/typechain',
+    },
     networks: {
         moon: {
             url: RPC_URL_MOONBASE_APLHA,
