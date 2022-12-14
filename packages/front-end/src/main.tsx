@@ -1,12 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import App from "./App"
 import { Routes, Route, BrowserRouter } from "react-router-dom"
 import "./index.css"
 import { HomePage } from "./pages"
 import { Header } from "./component"
 import { Web3ReactProvider } from "@web3-react/core"
 import { providers } from "ethers"
+import { Stars } from "./pages/Stars/Stars"
+import { Star } from "./pages/Star/Star"
 
 function getLibrary(
     provider: providers.ExternalProvider
@@ -20,7 +21,11 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <Header />
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
+                    <Route path="/" element={<HomePage />}>
+                        <Route path="/stars" element={<Stars />}>
+                            <Route path="/{id}" element={<Star />} />
+                        </Route>
+                    </Route>
                 </Routes>
             </BrowserRouter>
         </Web3ReactProvider>
