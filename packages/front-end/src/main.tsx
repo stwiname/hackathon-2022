@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client"
 import App from "./App"
 import { Routes, Route, BrowserRouter } from "react-router-dom"
 import "./index.css"
-import { HomePage } from "./pages"
+import { HomePage, DetailPage } from "./pages"
 import { Header } from "./component"
 import { Web3ReactProvider } from "@web3-react/core"
 import { providers } from "ethers"
@@ -21,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
+                    <Route path="/:name" element={<DetailPage />}/>
                 </Routes>
             </BrowserRouter>
         </Web3ReactProvider>

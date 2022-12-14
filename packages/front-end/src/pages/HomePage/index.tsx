@@ -8,10 +8,11 @@ import styles from "./style.module.scss"
 import { Link } from "react-router-dom"
 import { NFTMetadata } from "../../types/contracts/nft"
 import { ListBox } from "../../component"
+import { observer } from "mobx-react"
 
 interface IProps extends RouteConfigComponentProps {}
 
-export const HomePage: React.FC<IProps> = (Iprops) => {
+export const HomePage: React.FC<IProps> = observer((Iprops) => {
     const nftList: NFTMetadata[] = [
         {
             name: "Ian the Ingenious",
@@ -72,11 +73,11 @@ export const HomePage: React.FC<IProps> = (Iprops) => {
                     </Col>
                     <Col span={19} className={styles.nftCol}>
                         {nftList.map((e) => {
-                            return <ListBox nft={e} key={e.name}/>
+                            return <ListBox nft={e} key={e.name} />
                         })}
                     </Col>
                 </Row>
             </div>
         </div>
     )
-}
+})
