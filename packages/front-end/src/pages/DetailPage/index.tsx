@@ -31,10 +31,10 @@ export const DetailPage: React.FC<IProps> = observer(() => {
                             </p>
                         </Card>
                         <div className={styles.btns}>
-                            <Button type="primary" className={styles.btn}>
+                            <Button onClick={() => alert('Added Successfully')} type="primary" className={styles.btn}>
                                 Add to Card
                             </Button>
-                            <Button className={styles.btn}>Rent Now</Button>
+                            <Button onClick={() => {alert('Please check your email for confirmation')}} className={styles.btn}>Rent Now</Button>
                         </div>
                     </Col>
                 </Row>
