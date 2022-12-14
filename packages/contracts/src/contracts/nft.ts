@@ -5,7 +5,7 @@ import {
     RentToken__factory,
     Renting,
     Renting__factory,
-} from "@psst/contracts"
+} from "../typechain"
 import assert from "assert"
 import type { Signer, BigNumberish } from "ethers"
 import type { Provider } from "@ethersproject/providers"

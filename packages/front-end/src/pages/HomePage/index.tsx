@@ -1,19 +1,15 @@
-import React from "react"
-import { RouteConfigComponentProps } from "react-router-config"
 import { Carousel, Row, Col } from "antd"
 import ian from "./imgs/ian.jpg"
 import weiqi from "./imgs/Weiqi.jpg"
 import robert from "./imgs/Rob.jpg"
 import styles from "./style.module.scss"
 import { Link } from "react-router-dom"
-import { NFTMetadata } from "../../types/contracts/nft"
 import { ListBox } from "../../component"
-import {
-    RentNFTSdk,
-    TOKEN_IDS,
-    getNFTMetadata,
-} from "../../types/contracts/nft"
 import { useWeb3React } from "@web3-react/core"
+import { RouteConfigComponentProps } from "react-router-config"
+import React from "react"
+import { NFTMetadata, RentNFTSdk } from "@psst/contracts"
+// import { RentNFTSdk } from "@psst/contracts/dist/contracts/nft"
 
 interface IProps extends RouteConfigComponentProps {}
 
