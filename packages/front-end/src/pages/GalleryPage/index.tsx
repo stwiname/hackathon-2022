@@ -13,7 +13,7 @@ export const GalleryPage: FC<IProps> = (props) => {
             <Carousel>
                 {nftList.map((e) => {
                     return (
-                        <div>
+                        <div key={e.name}>
                             <div className={style.imgBox}>
                                 <img src={e.image} height={320} alt={e.name} />
                             </div>

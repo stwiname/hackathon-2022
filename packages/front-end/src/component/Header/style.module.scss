@@ -33,3 +33,9 @@
 
 
 }
+
+.notUgly {
+    // remove all default link css
+    text-decoration: unset;
+    color: unset;
+}

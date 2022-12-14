@@ -21,14 +21,14 @@ export const DetailPage: React.FC<IProps> = observer(() => {
         },
         {
             name: "Rob the mighty",
-            image: "./images/rob.png",
+            image: "./images/rob.jpg",
             description: "Super Hero Business Marketing",
             renter: "Robert",
             hourly: 1,
         },
         {
             name: "Weiqi the powerful",
-            image: "./images/weiqi.png",
+            image: "./images/weiqi.jpg",
             description: "Super Hero Social Marketing",
             renter: "Weiqi",
             hourly: 1,
@@ -49,17 +49,16 @@ export const DetailPage: React.FC<IProps> = observer(() => {
                             <p className={styles.renter}>
                                 Rented by {nft.renter}
                             </p>
-                            <p className={styles.price}>Price {nft.hourly} eth / hour</p>
+                            <p className={styles.price}>
+                                Price {nft.hourly} eth / hour
+                            </p>
                         </Card>
                         <div className={styles.btns}>
-                          <Button type="primary" className={styles.btn}>
-                            Add to Card
-                          </Button>
-                          <Button className={styles.btn}>
-                            Rent Now
-                          </Button>
+                            <Button type="primary" className={styles.btn}>
+                                Add to Card
+                            </Button>
+                            <Button className={styles.btn}>Rent Now</Button>
                         </div>
-                        
                     </Col>
                 </Row>
             </div>
