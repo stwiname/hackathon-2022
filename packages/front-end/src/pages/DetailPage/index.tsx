@@ -49,7 +49,7 @@ export const DetailPage: React.FC<IProps> = observer(() => {
                             <p className={styles.renter}>
                                 Rented by {nft.renter}
                             </p>
-                            <p>Price {nft.hourly} eth / hour</p>
+                            <p className={styles.price}>Price {nft.hourly} eth / hour</p>
                         </Card>
                         <div className={styles.btns}>
                           <Button type="primary" className={styles.btn}>
@@ -59,6 +59,7 @@ export const DetailPage: React.FC<IProps> = observer(() => {
                             Rent Now
                           </Button>
                         </div>
+                        
                     </Col>
                 </Row>
             </div>
