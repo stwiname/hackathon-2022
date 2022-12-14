@@ -12,14 +12,14 @@ export const nftList: NFTMetadata[] = [
     {
       name: "Rob the Radiant",
       image: "./images/rob.jpg",
-      description: "Once rubbing shoulders with Huge himself at the mansion, Rob is full of marketing sunshine and has all the tips and tricks of getting the message out. If you are looking for that hockey stick growth, Rob will ensure results, with a money back guarantee. Book him now!",
+      description: "Once rubbing shoulders with Hugh himself at the mansion, Rob is full of marketing sunshine and has all the tips and tricks of getting the message out. If you are looking for that hockey stick growth, Rob will ensure results, with a money back guarantee. Book him now!",
         renter: "Robert",
         hourly: 1,
     },
     {
       name: "Weiqi the Wonderful",
       image: "./images/weiqi.jpg",
-      description: "Need a social media experience? I gate keeper to your event? With those pearly whites, all events will guarantee to be a sell out.  With her local knowledge of Singapore, she also moonlights as a tour guide. Two for the price of one. Don't miss out and book now!",
+      description: "Weiqi is a master of taking brands from the underworld of no followers, to the heights of social media. Do you need to transform your company into a Tik Tok sensation? Book now!",
         renter: "Weiqi",
         hourly: 1,
     },
