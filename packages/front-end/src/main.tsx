@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App"
-import { Routes, Route, BrowserRouter } from "react-router-dom"
+import { Routes, Route, BrowserRouter, redirect } from "react-router-dom"
 import "./index.css"
 import { HomePage, DetailPage } from "./pages"
 import { Header } from "./component"

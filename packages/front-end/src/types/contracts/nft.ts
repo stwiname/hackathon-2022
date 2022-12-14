@@ -18,6 +18,8 @@ export type NFTMetadata = {
     name: string
     image: string
     description: string
+    hourly?: number
+    renter?: string
 }
 
 const NFT_ADDRESS = import.meta.env.NFT_ADDRESS
