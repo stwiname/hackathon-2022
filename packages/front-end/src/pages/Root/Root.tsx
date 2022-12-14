@@ -1,5 +1,5 @@
-import React, { FC } from "react"
-import { Outlet } from "react-router-dom"
+import React, { FC, useEffect } from "react"
+import { Outlet, redirect, useNavigate } from "react-router-dom"
 import { Header } from "../../component"
 import style from "./Root.module.scss"
 
@@ -8,6 +8,10 @@ interface IProps {
 }
 
 export const Root: FC<IProps> = (props) => {
+    const nav = useNavigate()
+    useEffect(() => {
+        nav('/Home')
+    }, [])
     return (
         <div>
             <Header />

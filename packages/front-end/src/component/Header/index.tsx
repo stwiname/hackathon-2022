@@ -59,7 +59,7 @@ export const Header: React.FC<IProps> = observer(() => {
             </Link>
 
             <Link to="gallery" className={styles.notUgly}>
-                <div>Gallery</div>
+                <div className={styles.Gallery}>Gallery</div>
             </Link>
 
             {!auth.user ? (
