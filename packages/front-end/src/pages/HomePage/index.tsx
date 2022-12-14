@@ -21,7 +21,7 @@ export const HomePage: React.FC<IProps> = (Iprops) => {
     const { library, account } = useWeb3React()
 
     const sdk = React.useMemo(
-        () => new RentNFTSdk(library.getSigner(account)),
+        () => !!library && new RentNFTSdk(library.getSigner(account)),
         [library, account]
     )
 
