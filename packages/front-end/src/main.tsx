@@ -7,6 +7,7 @@ import { HomePage, DetailPage } from "./pages"
 import { Header } from "./component"
 import { Web3ReactProvider } from "@web3-react/core"
 import { providers } from "ethers"
+import { GalleryPage } from "./pages/GalleryPage"
 
 function getLibrary(
     provider: providers.ExternalProvider
@@ -21,7 +22,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/:name" element={<DetailPage />}/>
+                    <Route path="/:name" element={<DetailPage />} />
+                    <Route path="/gallery" element={<GalleryPage />} />
                 </Routes>
             </BrowserRouter>
         </Web3ReactProvider>

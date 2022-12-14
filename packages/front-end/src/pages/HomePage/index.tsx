@@ -1,9 +1,9 @@
 import React from "react"
 import { RouteConfigComponentProps } from "react-router-config"
 import { Carousel, Row, Col } from "antd"
-import ian from "./imgs/ian.jpg"
-import weiqi from "./imgs/Weiqi.jpg"
-import robert from "./imgs/Rob.jpg"
+// import ian from "./imgs/ian.jpg"
+// import weiqi from "./imgs/Weiqi.jpg"
+// import robert from "./imgs/Rob.jpg"
 import styles from "./style.module.scss"
 import { Link } from "react-router-dom"
 import { NFTMetadata } from "../../types/contracts/nft"
@@ -11,6 +11,7 @@ import { ListBox } from "../../component"
 import { observer } from "mobx-react"
 import { useWeb3React } from "@web3-react/core"
 import { RentNFTSdk } from "../../types/contracts/nft"
+import { nftList } from "../../data"
 
 interface IProps extends RouteConfigComponentProps {}
 
@@ -22,43 +23,8 @@ export const HomePage: React.FC<IProps> = observer((Iprops) => {
         [library, account]
     )
 
-    const nftList: NFTMetadata[] = [
-        {
-            name: "Ian the Ingenious",
-            image: "./images/ian.jpg",
-            description:
-                "No matter how difficult your coding question is, Ian the Ingenious will be able to answer them all. Not only was he the co-founder of StackOverflow, he actually answered 90% of all the questions under different pseudonym to remain hidden (much like Satoshi), but we have tracked him and and made him available to everyone... for a price of course.",
-        },
-        {
-            name: "Rob the mighty",
-            image: "./images/rob.jpg",
-            description: "Super Hero Business Marketing",
-        },
-        {
-            name: "Weiqi the powerful",
-            image: "./images/weiqi.jpg",
-            description: "Super Hero Social Marketing",
-        },
-    ]
     return (
         <div className={styles.container}>
-            <Carousel>
-                <div>
-                    <div className={styles.imgBox}>
-                        <img src={ian} height={320} alt="Ian" />
-                    </div>
-                </div>
-                <div>
-                    <div className={styles.imgBox}>
-                        <img src={weiqi} height={320} alt="Weiqi" />
-                    </div>
-                </div>
-                <div>
-                    <div className={styles.imgBox}>
-                        <img src={robert} height={320} alt="Rob" />
-                    </div>
-                </div>
-            </Carousel>
             <div className={styles.trendingAndListing}>
                 <Row>
                     <Col span={5} className={styles.trendingCol}>
